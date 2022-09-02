@@ -23,8 +23,8 @@ loadingReturn('public/client.js', 'text/javascript', myResponse)
      loadingReturn('public/list.html','text/html', myResponse) 
   }
   
-  myResponse.writeHead(200);
-  myResponse.end();
+  // myResponse.writeHead(200);
+  // myResponse.end();
 }
 
 const server = http.createServer(requestListener);
