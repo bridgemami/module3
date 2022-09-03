@@ -42,13 +42,13 @@ server.listen(
 function loadingReturn (fileName, contentType, myResponse) {
    // load file from server filesystem
   fs.readFile(__dirname + '/' + fileName)
-  .then(contentType => {
+  .then(contents => {
     // set http response header entry text/html
    myResponse.setHeader('Content-Type', contentType + '; charset=UTF-8');
 // return 200 OK http status code
   myResponse.writeHead(200);
     // send back file contents + close response
-    myResponse.end();
+    myResponse.end(contents);
 }
  );
 }
